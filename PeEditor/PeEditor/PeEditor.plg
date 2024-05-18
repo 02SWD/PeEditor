@@ -1,0 +1,125 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PeEditor - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/GraphicalInterface.res" /d "_DEBUG" "C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\GraphicalInterface.rc"" 
+Creating temporary file "C:\DOCUME~1\QIANYI~1\LOCALS~1\Temp\RSP1D.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/PeEditor.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonBaseRelocView.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonDataDirectoryView.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonExportTableView.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonIatTableView.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonImportTableView.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonOptionPeView.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonPeViewMain.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonSectionView.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\aesUtils.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ResetWindowTileUtil.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\Rva2A2Foa.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\Utils.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\GobalVariables.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonAboutCode.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonEncryptShellMain.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\EncryptingShell.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\peOperateAboutShell.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\DLLInjectByLoadLibrary.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\DLLInjectByWriteMemory.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\DLLInjectByWriteMemoryOther.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonDLLinjectMain.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonIatHook.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonHookMain.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonDriverNormal.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ButtonDriverMain.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\PeEditor.cpp"
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\ProcessAndModuleOperation.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\QIANYI~1\LOCALS~1\Temp\RSP1D.tmp" 
+Creating temporary file "C:\DOCUME~1\QIANYI~1\LOCALS~1\Temp\RSP1E.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/PeEditor.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\QianYiShen\桌面\project\PeEditor\PeEditor\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\QIANYI~1\LOCALS~1\Temp\RSP1E.tmp" 
+Creating temporary file "C:\DOCUME~1\QIANYI~1\LOCALS~1\Temp\RSP1F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/PeEditor.pdb" /debug /machine:I386 /out:"Debug/PeEditor.exe" /pdbtype:sept 
+".\Debug\ButtonBaseRelocView.obj"
+".\Debug\ButtonDataDirectoryView.obj"
+".\Debug\ButtonExportTableView.obj"
+".\Debug\ButtonIatTableView.obj"
+".\Debug\ButtonImportTableView.obj"
+".\Debug\ButtonOptionPeView.obj"
+".\Debug\ButtonPeViewMain.obj"
+".\Debug\ButtonSectionView.obj"
+".\Debug\aesUtils.obj"
+".\Debug\ResetWindowTileUtil.obj"
+".\Debug\Rva2A2Foa.obj"
+".\Debug\Utils.obj"
+".\Debug\GobalVariables.obj"
+".\Debug\ButtonAboutCode.obj"
+".\Debug\ButtonEncryptShellMain.obj"
+".\Debug\EncryptingShell.obj"
+".\Debug\peOperateAboutShell.obj"
+".\Debug\DLLInjectByLoadLibrary.obj"
+".\Debug\DLLInjectByWriteMemory.obj"
+".\Debug\DLLInjectByWriteMemoryOther.obj"
+".\Debug\ButtonDLLinjectMain.obj"
+".\Debug\ButtonIatHook.obj"
+".\Debug\ButtonHookMain.obj"
+".\Debug\ButtonDriverNormal.obj"
+".\Debug\ButtonDriverMain.obj"
+".\Debug\PeEditor.obj"
+".\Debug\ProcessAndModuleOperation.obj"
+".\Debug\StdAfx.obj"
+".\Debug\GraphicalInterface.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\QIANYI~1\LOCALS~1\Temp\RSP1F.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ButtonBaseRelocView.cpp
+ButtonDataDirectoryView.cpp
+ButtonExportTableView.cpp
+ButtonIatTableView.cpp
+ButtonImportTableView.cpp
+ButtonOptionPeView.cpp
+ButtonPeViewMain.cpp
+ButtonSectionView.cpp
+aesUtils.cpp
+ResetWindowTileUtil.cpp
+Rva2A2Foa.cpp
+Utils.cpp
+GobalVariables.cpp
+ButtonAboutCode.cpp
+ButtonEncryptShellMain.cpp
+EncryptingShell.cpp
+peOperateAboutShell.cpp
+DLLInjectByLoadLibrary.cpp
+DLLInjectByWriteMemory.cpp
+DLLInjectByWriteMemoryOther.cpp
+Generating Code...
+Compiling...
+ButtonDLLinjectMain.cpp
+ButtonIatHook.cpp
+ButtonHookMain.cpp
+ButtonDriverNormal.cpp
+ButtonDriverMain.cpp
+PeEditor.cpp
+ProcessAndModuleOperation.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+PeEditor.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

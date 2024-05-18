@@ -1,0 +1,773 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOGEX 250, 100, 439, 227
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PeOperator"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,349,213
+    GROUPBOX        "",IDC_STATIC,360,7,72,213
+    CONTROL         "List2",IDC_LIST_PROCESSLIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,13,16,309,79
+    CONTROL         "List3",IDC_LIST_MODULELIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,13,102,337,112
+    PUSHBUTTON      "PE查看器",IDC_BUTTON_PeView,369,17,57,16,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "软件加壳",IDC_BUTTON_SoftwareShell,369,41,57,16,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "DLL注入",IDC_BUTTON_Dllinjection,369,67,57,16,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "关   于",IDC_BUTTON_About,369,170,57,16,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "退    出",IDC_BUTTON_EXIT,369,195,57,16,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "HOOK",IDC_BUTTON_HOOK,369,91,57,16,0,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "刷 新",IDC_BUTTON_PROCESSLIST_flushed,326,16,24,80,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "驱   动",IDC_BUTTON_DriverMain,370,115,57,16,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_ABOUT DIALOGEX 0, 0, 234, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ABOUT"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "程序说明",IDC_STATIC,7,7,220,107
+    LTEXT           "        本程序包含PE解析、软件加壳、DLL注入等相关功能。所涉及内容仅供学习使用，不得用于非法目的。",
+                    IDC_STATIC,29,28,176,51
+    LTEXT           "    浅易深",IDC_STATIC,165,81,42,14
+    PUSHBUTTON      "退 出",IDC_BUTTON_AboutExit,165,94,42,14,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_PeViewMainDlg DIALOGEX 250, 100, 346, 173
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PeView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "DOS头信息",IDC_STATIC,7,7,266,45
+    LTEXT           "e_magic",IDC_STATIC,15,22,69,11
+    LTEXT           "e_lfanew",IDC_STATIC,15,37,69,11
+    LTEXT           "Machine",IDC_STATIC,13,76,29,11
+    GROUPBOX        "标准PE头信息",IDC_STATIC,7,63,266,103
+    LTEXT           "NumberOfSections",IDC_STATIC,13,90,61,11
+    LTEXT           "TimeDateStamp",IDC_STATIC,13,105,53,11
+    LTEXT           "PointerToSymbolTable",IDC_STATIC,13,120,75,11
+    LTEXT           "SizeOfOptionalHeader",IDC_STATIC,13,149,74,11
+    LTEXT           "Characteristics",IDC_STATIC,162,76,49,11
+    LTEXT           "NumberOfSymbols",IDC_STATIC,13,135,62,11
+    EDITTEXT        IDC_EDIT_PointerToSymbolTable,92,118,59,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Machine,92,73,59,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NumberOfSections,92,88,59,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TimeDateStamp,92,103,59,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NumberOfSymbols,92,133,59,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfOptionalHeader,92,148,59,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Characteristics,213,74,59,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_e_magic,92,20,59,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_e_lfanew,92,36,59,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_STATIC,277,7,62,159
+    PUSHBUTTON      "退   出",IDC_BUTTON_PeViewDlgExit,283,147,50,14,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "可选PE头",IDC_BUTTON_OptionPeVew,283,17,50,14,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "区   段",IDC_BUTTON_SectionView,283,35,50,14,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "数据目录项",IDC_BUTTON_DirectoryView,283,54,50,14,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_OptionPeView DIALOGEX 0, 0, 679, 349
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OptionPeView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "可选PE头信息",IDC_STATIC,7,7,665,335
+    LTEXT           "Magic (标志)",IDC_STATIC,18,22,56,10
+    LTEXT           "MajorLinkerVersion (最低要求子系统版本的主版本号)",
+                    IDC_STATIC,18,48,187,10
+    LTEXT           "MinorLinkerVersion (最低要求子系统版本的次版本号)",
+                    IDC_STATIC,18,74,185,10
+    LTEXT           "SizeOfCode (所有含代码的节的总大小)",IDC_STATIC,18,101,
+                    177,10
+    LTEXT           "SizeOfInitializedData (所有含已初始化数据的节的总大小)",
+                    IDC_STATIC,18,128,200,10
+    LTEXT           "SizeOfUninitializedData (所有含未初始化数据的节的总大小)",
+                    IDC_STATIC,18,155,208,10
+    LTEXT           "MajorOperatingSystemVersion (要求操作系统最低版本号的主版本号)",
+                    IDC_STATIC,234,22,240,10
+    LTEXT           "MinorOperatingSystemVersion (要求操作系统最低版本号的副版本号)",
+                    IDC_STATIC,234,47,237,10
+    LTEXT           "MajorImageVersion (可运行于操作系统的主版本号)",
+                    IDC_STATIC,234,73,232,10
+    LTEXT           "MinorImageVersion (可运行于操作系统的次版本号)",
+                    IDC_STATIC,234,100,230,10
+    LTEXT           "MajorSubsystemVersion (链接程序的主版本号)",IDC_STATIC,
+                    234,127,232,10
+    LTEXT           "MinorSubsystemVersion (链接程序的次版本号)",IDC_STATIC,
+                    234,154,206,10
+    LTEXT           "SizeOfStackReserve (初始化时的栈大小)",IDC_STATIC,479,
+                    21,139,10
+    LTEXT           "SizeOfStackCommit (初始化时实际提交的栈大小)",
+                    IDC_STATIC,479,46,168,10
+    LTEXT           "SizeOfHeapReserve (初始化时保留的堆大小)",IDC_STATIC,
+                    479,72,157,10
+    LTEXT           "SizeOfHeapCommit (初始化时实际提交的堆大小)",IDC_STATIC,
+                    479,99,168,10
+    LTEXT           "LoaderFlags (与调试有关，默认为0)",IDC_STATIC,479,126,
+                    151,10
+    LTEXT           "NumberOfRvaAndSizes (下边数据目录的项数)",IDC_STATIC,
+                    479,153,164,10
+    LTEXT           "AddressOfEntryPoint (简写：OEP,程序执行入口RVA)",
+                    IDC_STATIC,18,181,204,10
+    LTEXT           "BaseOfCode (代码的区块的起始RVA)",IDC_STATIC,18,207,200,
+                    10
+    LTEXT           "BaseOfData (数据的区块的起始RVA)",IDC_STATIC,18,233,175,
+                    10
+    LTEXT           "ImageBase (程序的首选装载地址)",IDC_STATIC,18,259,166,
+                    10
+    LTEXT           "SectionAlignment (内存中的区块的对齐大小)",IDC_STATIC,
+                    18,285,170,10
+    LTEXT           "FileAlignment (文件中的区块的对齐大小)",IDC_STATIC,18,
+                    311,171,10
+    LTEXT           "Win32VersionValue (保留字段)",IDC_STATIC,234,180,186,10
+    LTEXT           "SizeOfImage (映像装入内存后的总尺寸)",IDC_STATIC,234,
+                    206,155,10
+    LTEXT           "SizeOfHeaders (所有头+节表的总大小)",IDC_STATIC,234,232,
+                    146,10
+    LTEXT           "CheckSum (映像的校验和)",IDC_STATIC,234,258,135,10
+    LTEXT           "Subsystem (可执行文件期望的子系统)",IDC_STATIC,234,284,
+                    152,10
+    LTEXT           "DllCharacteristics (DllMain()函数何时被调用，默认为0)",
+                    IDC_STATIC,234,310,193,10
+    EDITTEXT        IDC_EDIT_Magic,18,32,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MajorLinkerVersion,19,58,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MinorLinkerVersion,19,85,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfCode,19,112,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfInitializedData,19,139,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfUninitializedData,19,165,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_AddressOfEntryPoint,19,191,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BaseOfCode,19,217,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BaseOfData,19,244,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ImageBase,19,270,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SectionAlignment,19,296,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FileAlignment,19,323,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MajorOperatingSystemVersion,234,32,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MinorOperatingSystemVersion,235,58,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MajorImageVersion,235,85,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MinorImageVersion,235,112,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MajorSubsystemVersion,235,139,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MinorSubsystemVersion,235,165,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Win32VersionValue,235,191,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfImage,235,217,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfHeaders,235,244,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CheckSum,235,270,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Subsystem,235,296,202,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DllCharacteristics,235,323,202,13,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfStackReserve,478,31,182,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfStackCommit,479,57,182,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfHeapReserve,479,84,182,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SizeOfHeapCommit,479,111,182,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LoaderFlags,479,138,182,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NumberOfRvaAndSizes,479,164,182,13,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "退    出",IDC_BUTTON_OptionPeViewExit,478,310,174,18,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_SectionTableView DIALOGEX 0, 0, 469, 227
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SectionTableView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "节表",IDC_STATIC,7,7,455,213
+    CONTROL         "List2",IDC_LIST_SectionTableView,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,11,17,448,172
+    PUSHBUTTON      "==================================================================== ==> 退        出 <=======================================================================",
+                    IDC_BUTTON_SectionTableExit,14,197,442,17,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_DataDirectoryView DIALOGEX 0, 0, 260, 316
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DataDirectoryView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "目录信息",IDC_STATIC,7,7,210,302
+    LTEXT           "导出表",IDC_STATIC,17,34,34,10
+    LTEXT           "导入表",IDC_STATIC,17,51,34,10
+    LTEXT           "资源表",IDC_STATIC,17,68,34,10
+    LTEXT           "异常表",IDC_STATIC,17,84,34,10
+    LTEXT           "安全",IDC_STATIC,17,101,34,10
+    LTEXT           "重定位",IDC_STATIC,17,118,34,10
+    LTEXT           "调试",IDC_STATIC,17,135,34,10
+    LTEXT           "版权",IDC_STATIC,17,152,34,10
+    LTEXT           "全局指针",IDC_STATIC,17,169,34,10
+    LTEXT           "TLS",IDC_STATIC,17,186,34,10
+    LTEXT           "导入配置",IDC_STATIC,17,203,34,10
+    LTEXT           "绑定导入",IDC_STATIC,17,220,34,10
+    LTEXT           "IAT表",IDC_STATIC,17,238,34,10
+    LTEXT           "延时导入",IDC_STATIC,17,256,34,10
+    LTEXT           "COM",IDC_STATIC,17,274,34,10
+    LTEXT           "保留",IDC_STATIC,17,291,34,10
+    LTEXT           "RVA",IDC_STATIC,82,19,19,10
+    LTEXT           "SIZE",IDC_STATIC,146,19,19,10
+    EDITTEXT        IDC_EDIT_ExportTable_RVA,63,32,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ExportTable_SIZE,128,32,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ImportTable_RVA,63,49,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ImportTable_SIZE,128,49,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ResourceTable_RVA,63,66,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ResourceTable_SIZE,128,66,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ExceptionTable_RVA,63,82,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ExceptionTable_SIZE,128,82,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SecurityTable_RVA,63,99,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SecurityTable_SIZE,128,99,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BaseRelocTable_RVA,63,116,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BaseRelocTable_SIZE,128,116,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DebugTable_RVA,63,133,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DebugTable_SIZE,128,133,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CopyRightTable_RVA,63,150,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CopyRightTable_SIZE,128,150,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_GlobalPtrTable_RVA,63,167,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_GlobalPtrTable_SIZE,129,167,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TLSTable_RVA,63,184,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TLSTable_SIZE,128,184,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LoadConfigTable_RVA,63,201,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LoadConfigTable_SIZE,128,201,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BoundImportTable_RVA,63,218,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BoundImportTable_SIZE,128,218,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IATTable_RVA,63,236,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IATTable_SIZE,128,236,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DelayImportTable_RVA,63,254,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DelayImportTable_SIZE,128,254,54,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ComTable_RVA,63,272,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ComTable_SIZE,128,272,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RetainTable_RVA,63,289,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RetainTable_SIZE,128,289,54,12,ES_AUTOHSCROLL
+    PUSHBUTTON      ". . .",IDC_BUTTON_ExportTable_Detailed,189,33,20,11
+    PUSHBUTTON      ". . .",IDC_BUTTON_ImportTable_Detailed,189,50,20,11
+    PUSHBUTTON      ". . .",IDC_BUTTON_ResourceTable_Detailed,189,67,20,11
+    PUSHBUTTON      ". . .",IDC_BUTTON_BaseRelocTable_Detailed,189,117,20,11
+    PUSHBUTTON      ". . .",IDC_BUTTON_IATTable_Detailed,189,237,20,11
+    PUSHBUTTON      ". . .",IDC_BUTTON_BoundImportTable_Detailed,189,219,20,
+                    11
+    PUSHBUTTON      "退出",IDC_BUTTON_DataDirectoryViewExit,223,12,24,296,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_ExportTableView DIALOGEX 0, 0, 454, 330
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ExportTableView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "导出表信息",IDC_STATIC,7,7,440,316
+    LTEXT           "Characteristics",IDC_STATIC,16,22,68,9
+    EDITTEXT        IDC_EDIT_ExportCharacteristics,16,32,86,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "TimeDateStamp",IDC_STATIC,16,47,68,9
+    EDITTEXT        IDC_EDIT_ExportTimeDateStamp,16,57,86,12,ES_AUTOHSCROLL
+    LTEXT           "MajorVersion",IDC_STATIC,16,72,68,9
+    EDITTEXT        IDC_EDIT_ExportMajorVersion,16,82,86,12,ES_AUTOHSCROLL
+    LTEXT           "MinorVersion",IDC_STATIC,16,97,68,9
+    EDITTEXT        IDC_EDIT_ExportMinorVersion,16,107,86,12,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,16,122,68,9
+    EDITTEXT        IDC_EDIT_ExportName,16,132,86,12,ES_AUTOHSCROLL
+    LTEXT           "DLL Name",IDC_STATIC,16,146,68,9
+    EDITTEXT        IDC_EDIT_ExportDllName,16,156,86,12,ES_AUTOHSCROLL
+    LTEXT           "Base",IDC_STATIC,210,22,68,9
+    EDITTEXT        IDC_EDIT_ExportBase,210,32,86,12,ES_AUTOHSCROLL
+    LTEXT           "NumberOfFunctions",IDC_STATIC,210,47,68,9
+    EDITTEXT        IDC_EDIT_ExportNumbreOfFunctions,210,57,86,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "NumberOfNames",IDC_STATIC,210,72,68,9
+    EDITTEXT        IDC_EDIT_ExportNumberOfNames,210,82,86,12,ES_AUTOHSCROLL
+    LTEXT           "AddressOfFunctions",IDC_STATIC,210,97,68,9
+    EDITTEXT        IDC_EDIT_ExportAddressOfFunctions,210,107,86,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "AddressOfNames",IDC_STATIC,210,122,68,9
+    EDITTEXT        IDC_EDIT_ExportAddressOfNames,210,132,86,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "AddressOfNameOrdinals",IDC_STATIC,210,146,86,9
+    EDITTEXT        IDC_EDIT_ExportAddressOfNameOrdinals,210,156,86,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "未使用，总是定义为0",IDC_STATIC,107,33,84,10
+    LTEXT           "文件生成时间",IDC_STATIC,107,57,84,10
+    LTEXT           "未使用，总是定义为0",IDC_STATIC,107,82,84,10
+    LTEXT           "未使用，总是定义为0",IDC_STATIC,107,107,84,10
+    LTEXT           "模块的真实名称RVA",IDC_STATIC,107,132,84,10
+    LTEXT           "导出函数的起始序号",IDC_STATIC,301,33,84,10
+    LTEXT           "所有导出函数的个数",IDC_STATIC,301,57,84,10
+    LTEXT           "以函数名字导出的函数个数",IDC_STATIC,301,82,84,10
+    LTEXT           "导出函数地址表RVA",IDC_STATIC,301,107,84,10
+    LTEXT           "导出函数名称表RVA",IDC_STATIC,301,132,84,10
+    LTEXT           "导出函数序号表RVA",IDC_STATIC,301,156,84,10
+    GROUPBOX        "导出函数地址表",IDC_STATIC,16,174,143,145
+    CONTROL         "List1",IDC_LIST_ExportAddressOfFunctionsTable,
+                    "SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,21,
+                    185,133,130
+    GROUPBOX        "导出函数序号表和名称表",IDC_STATIC,164,174,241,145
+    CONTROL         "List1",IDC_LIST_ExportOtherTwoTables,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,170,185,227,130
+    PUSHBUTTON      "退出",IDC_BUTTON_ExportTableViewExit,414,19,26,296,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_ImportTableView DIALOGEX 0, 0, 444, 234
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ImportTableView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "导入表信息",IDC_STATIC,7,7,430,220
+    CONTROL         "List1",IDC_LIST_ImportTableBaseInfo,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,13,19,389,87
+    CONTROL         "List2",IDC_LIST_ImportFuncByOrdinal,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,13,114,136,104
+    CONTROL         "List2",IDC_LIST_ImportFuncByName,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,158,114,244,104
+    PUSHBUTTON      "退出",IDC_BUTTON_ImportTableViewExit,410,20,21,197,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_BaseReLocView DIALOGEX 0, 0, 400, 249
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BaseRelocView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "重定位表信息",IDC_STATIC,7,7,386,235
+    CONTROL         "List1",IDC_LIST_BaseRelocInfo,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,13,20,374,90
+    CONTROL         "List2",IDC_LIST_BaseRelocDetailed,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,14,119,343,115
+    PUSHBUTTON      "退出",IDC_BUTTON_BaseRelocViewExit,364,118,23,115,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_IatTableView DIALOGEX 0, 0, 438, 247
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IatTableView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "IAT表信息",IDC_STATIC,7,7,424,233
+    CONTROL         "List1",IDC_LIST_IatTableInfo,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,13,21,383,93
+    GROUPBOX        "【已绑定】导入表时的IAT表信息",IDC_STATIC,14,121,124,
+                    113
+    GROUPBOX        "【未绑定】导入表时的IAT表信息",IDC_STATIC,144,121,252,
+                    113
+    CONTROL         "List2",IDC_LIST_YesBound,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,17,132,118,99
+    CONTROL         "List2",IDC_LIST_NoBound,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,147,132,246,99
+    PUSHBUTTON      "退出",IDC_BUTTON_IatTableViewExit,403,22,22,211,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_BoundImportTableView DIALOGEX 0, 0, 358, 223
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BoundImportTableView"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "绑定导入表信息",IDC_STATIC,7,7,344,209
+    CONTROL         "List1",IDC_LIST_BoundImportInfo,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,13,19,329,74
+    CONTROL         "List2",IDC_LIST_BoundImportDetailed,"SysListView32",
+                    LVS_REPORT | WS_BORDER | WS_TABSTOP,13,103,297,106
+    PUSHBUTTON      "退出",IDC_BUTTON_BoundImportViewExit,318,103,22,103,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_EncryptingShell DIALOG DISCARDABLE  250, 100, 317, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EncryptingShell"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "请选择壳源程序",IDC_BUTTON_shell,16,24,77,13
+    PUSHBUTTON      "请选择待加壳程序",IDC_BUTTON_srcApp,16,66,77,13
+    EDITTEXT        IDC_EDIT_shell,16,41,241,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_srcApp,16,83,241,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "加壳",IDC_STATIC,7,7,303,124
+    PUSHBUTTON      "退   出",IDC_BUTTON_EncryptingShellExit,243,110,57,15
+    PUSHBUTTON      "加  壳",IDC_BUTTON_startEncrypt,268,29,32,67
+END
+
+IDD_DIALOG_DLLInjection DIALOGEX 250, 100, 296, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DLL Injection"
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "注入",IDC_STATIC,7,7,282,151
+    LTEXT           "PID:",IDC_STATIC,18,26,16,10
+    EDITTEXT        IDC_EDIT_PID_dll,38,24,50,12,ES_AUTOHSCROLL
+    LTEXT           "DLL:",IDC_STATIC,105,26,16,10
+    EDITTEXT        IDC_EDIT_DllPath,125,24,123,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_selectDll,254,23,28,13
+    CONTROL         "远程线程",IDC_RADIO_LoadLibrary,"Button",
+                    BS_AUTORADIOBUTTON,33,53,48,10
+    CONTROL         "将本exe注入到目标进程中（上面dll路径无效）",
+                    IDC_RADIO_memoryWrite,"Button",BS_AUTORADIOBUTTON,33,72,
+                    180,10
+    CONTROL         "加载进程（待开发）",IDC_RADIO_loadProcess,"Button",
+                    BS_AUTORADIOBUTTON,33,90,88,10
+    CONTROL         "输入法（待开发）",IDC_RADIO_typewriting,"Button",
+                    BS_AUTORADIOBUTTON,33,110,80,10
+    PUSHBUTTON      "退出",IDC_BUTTON_exitOfDll,171,137,111,16,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "注入",IDC_BUTTON_startInject,171,113,50,14
+    PUSHBUTTON      "卸载",IDC_BUTTON_startUninstall,232,113,50,14
+    CONTROL         "内存写入-IAT表在自身进程修复",
+                    IDC_RADIO_WriteMemoryWithoutRemoteThread,"Button",
+                    BS_AUTORADIOBUTTON,33,131,121,10
+END
+
+IDD_DIALOG_HookMain DIALOGEX 250, 100, 214, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HookMain"
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "HOOK",IDC_STATIC,7,7,200,103
+    PUSHBUTTON      "IAT HOOK",IDC_BUTTON_IatHook,16,27,73,19,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "InLine HOOK(开发中)",IDC_BUTTON_InLineHook,108,27,89,19,
+                    0,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "退 出",IDC_BUTTON_HookMainExit,130,85,67,17,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_IATHOOK DIALOG DISCARDABLE  250, 100, 409, 309
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IAT Hook"
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "IAT Hook Method1",IDC_STATIC,7,7,395,169
+    LTEXT           "目标进程的pid:",IDC_STATIC,22,25,56,9
+    LTEXT           "目标进程中dll模块的首地址(16进制):",IDC_STATIC,22,96,
+                    140,9
+    LTEXT           "待被劫持的目标模块名称:",IDC_STATIC,22,42,95,9
+    LTEXT           "目标模块中待被劫持的目标函数的函数名称:",IDC_STATIC,22,
+                    60,157,9
+    LTEXT           "目标模块中待被劫持的目标函数的导出序号",IDC_STATIC,22,
+                    78,153,9
+    LTEXT           "要替换成的函数的函数名称:",IDC_STATIC,22,114,102,9
+    LTEXT           "要替换成的函数的导出序号:",IDC_STATIC,22,132,107,9
+    EDITTEXT        IDC_EDIT_IatHook_pid,181,24,102,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_dllAddrInTargetProcess,181,95,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_targetModuleName,181,41,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_targetFuncName,181,59,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_targetFuncOrdinal,181,77,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_nastyFuncName,181,113,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_nastyFuncOrdinal,181,131,102,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "不区分大小写",IDC_STATIC,290,42,50,10
+    LTEXT           "不区分大小写",IDC_STATIC,290,60,50,10
+    LTEXT           "16进制",IDC_STATIC,290,79,48,11
+    LTEXT           "该dll模块一般是我们注入的dll",IDC_STATIC,290,96,108,12
+    LTEXT           "不区分大小写",IDC_STATIC,290,114,50,10
+    LTEXT           "16进制",IDC_STATIC,290,131,48,11
+    LTEXT           "10进制",IDC_STATIC,290,25,48,11
+    PUSHBUTTON      "设置HOOK",IDC_BUTTON_IatHook_start,247,155,69,14
+    EDITTEXT        IDC_EDIT_oldFuncAddrValue,96,155,96,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "原来的IAT表表项值",IDC_STATIC,22,155,69,10
+    GROUPBOX        "IAT Hook Method2",IDC_STATIC,7,178,395,124
+    LTEXT           "目标进程的pid:",IDC_STATIC,22,191,56,9
+    LTEXT           "待被劫持的目标模块名称:",IDC_STATIC,22,208,95,9
+    LTEXT           "目标模块中待被劫持的目标函数的函数名称:",IDC_STATIC,22,
+                    226,157,9
+    LTEXT           "目标模块中待被劫持的目标函数的导出序号",IDC_STATIC,22,
+                    244,153,9
+    EDITTEXT        IDC_EDIT_IatHook_pid_Method2,181,190,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_targetModuleName_Method2,181,207,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_targetFuncName_Method2,181,225,102,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IatHook_targetFuncOrdinal_Method2,181,243,102,
+                    12,ES_AUTOHSCROLL
+    LTEXT           "不区分大小写",IDC_STATIC,290,208,50,10
+    LTEXT           "不区分大小写",IDC_STATIC,290,226,50,10
+    LTEXT           "16进制",IDC_STATIC,290,245,48,11
+    LTEXT           "10进制",IDC_STATIC,290,191,48,11
+    LTEXT           "要替换成的目标进程内的函数地址:",IDC_STATIC,22,261,153,
+                    9
+    EDITTEXT        IDC_EDIT_IatHook_targetFuncOrdinalMethod2,181,260,102,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "16进制",IDC_STATIC,290,261,48,11
+    EDITTEXT        IDC_EDIT_oldFuncAddrValue_Method2,96,281,96,12,
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "原来的IAT表表项值",IDC_STATIC,22,281,69,10
+    PUSHBUTTON      "设置HOOK",IDC_BUTTON_IatHook_start_method2,247,282,69,
+                    14
+END
+
+IDD_DIALOG_DriverMain DIALOGEX 250, 100, 302, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DriverMain"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "加载驱动（正常方式）",IDC_BUTTON_DriveLoadNormal,19,23,
+                    91,19,0,WS_EX_CLIENTEDGE
+    GROUPBOX        "驱动操作",IDC_STATIC,7,7,288,118
+END
+
+IDD_DIALOG_DriverLoadNormal DIALOG DISCARDABLE  250, 100, 316, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DriverLoadNormal"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT_SelectDriver,19,35,238,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "DriverLoding",IDC_STATIC,7,7,302,121
+    PUSHBUTTON      ". . .",IDC_BUTTON_SelectDriver,271,35,28,14
+    PUSHBUTTON      "Register",IDC_BUTTON_Register,22,75,50,14
+    PUSHBUTTON      "Run",IDC_BUTTON_Run,93,75,50,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_Stop,162,75,50,14
+    PUSHBUTTON      "UnRegister",IDC_BUTTON_UnRegister,232,75,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 432
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_DIALOG_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_DIALOG_PeViewMainDlg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DIALOG_OptionPeView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 672
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 342
+    END
+
+    IDD_DIALOG_SectionTableView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 462
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_DIALOG_DataDirectoryView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_DIALOG_ExportTableView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 447
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 323
+    END
+
+    IDD_DIALOG_ImportTableView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 437
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_DIALOG_BaseReLocView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 393
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_DIALOG_IatTableView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 431
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+
+    IDD_DIALOG_BoundImportTableView, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_DIALOG_EncryptingShell, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_DIALOG_DLLInjection, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_DIALOG_HookMain, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_DIALOG_IATHOOK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 402
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 302
+    END
+
+    IDD_DIALOG_DriverMain, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_DIALOG_DriverLoadNormal, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_QianYiShen     ICON    DISCARDABLE     "QianYiShen.ico"
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
