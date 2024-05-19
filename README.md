@@ -15,4 +15,5 @@
 ## 编译生成
 - 本项目采用VC6编写，请在VC6下编译生成
 
-
+## 操作界面
+![操作界面](https://raw.githubusercontent.com/02SWD/PeEditor/main/%E7%95%8C%E9%9D%A2%E5%B1%95%E7%A4%BA/01_%E9%A6%96%E9%A1%B5.png)
